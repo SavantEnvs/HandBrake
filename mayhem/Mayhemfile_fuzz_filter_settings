@@ -1,0 +1,9 @@
+project: savantenvs/HandBrake
+target: fuzz_filter_settings
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_filter_settings/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_filter_settings
+    libfuzzer: true
+    timeout: 10

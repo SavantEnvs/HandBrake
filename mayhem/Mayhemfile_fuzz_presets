@@ -1,0 +1,9 @@
+project: savantenvs/HandBrake
+target: fuzz_presets
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_presets/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_presets
+    libfuzzer: true
+    timeout: 10
